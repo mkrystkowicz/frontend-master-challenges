@@ -1,0 +1,170 @@
+$primary-dark-magenta: hsl(300, 43%, 22%);
+$primary-soft-pink: hsl(333, 80%, 67%);
+
+$neutral-dark-magenta: hsl(303, 10%, 53%);
+$neutral-light-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+$desktop-breakpoint: 768px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Spartan", sans-serif;
+	background-color: $white;
+	font-size: 15px;
+}
+
+.social-proof {
+	width: 100%;
+	height: 100%;
+	padding: 4rem 2rem;
+
+	@media (min-width: $desktop-breakpoint) {
+		max-width: 1200px;
+		margin: 4rem auto 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"heading rating"
+			"opinions opinions";
+	}
+
+	.heading {
+		text-align: center;
+
+		&__main-heading {
+			color: $primary-dark-magenta;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
+
+		&__sub-heading {
+			color: $neutral-dark-magenta;
+		}
+
+		@media (min-width: $desktop-breakpoint) {
+			grid-area: heading;
+			text-align: left;
+
+			&__main-heading {
+				font-size: 4rem;
+				margin-bottom: 1rem;
+			}
+
+			&__sub-heading {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.ratings {
+		height: 30vh;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: space-evenly;
+
+		&__rating .description {
+			color: $primary-dark-magenta;
+			font-weight: 700;
+			margin-top: 0.5rem;
+		}
+
+		@media (min-width: $desktop-breakpoint) {
+			grid-area: rating;
+			justify-content: space-between;
+
+			&__rating {
+				display: flex;
+				align-items: center;
+			}
+
+			&__rating:nth-child(1) {
+				align-self: flex-start;
+			}
+
+			&__rating:nth-child(3) {
+				align-self: flex-end;
+			}
+
+			&__rating .description {
+				margin: 0 15px;
+			}
+		}
+	}
+
+	.clients-opinions {
+		display: flex;
+		flex-direction: column;
+
+		&__client-opinion {
+			background-color: $primary-dark-magenta;
+			color: $white;
+			margin: 1rem 0;
+			border-radius: 10px;
+			padding: 1.2rem;
+
+			.client-info {
+				display: flex;
+				align-items: center;
+				padding: 0.7rem;
+
+				&__client-photo {
+					width: 60px;
+					height: 60px;
+					margin-right: 15px;
+				}
+
+				& img {
+					border-radius: 50%;
+					width: 100%;
+					height: 100%;
+				}
+
+				&__client-data {
+					.client-name {
+						font-size: 0.8rem;
+						font-weight: 800;
+						margin-bottom: 0.2rem;
+					}
+					.client-status {
+						color: $primary-soft-pink;
+						font-weight: 400;
+					}
+				}
+			}
+			.opinion {
+				line-height: 170%;
+			}
+		}
+
+		@media (min-width: $desktop-breakpoint) {
+			grid-area: opinions;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 3rem;
+			height: 40vh;
+
+			&__client-opinion {
+				height: 35vh;
+				margin: 0 1rem;
+				padding: 1.4rem 2rem;
+			}
+
+			&__client-opinion:nth-child(1) {
+				align-self: flex-start;
+			}
+
+			&__client-opinion:nth-child(3) {
+				align-self: flex-end;
+			}
+		}
+	}
+}
