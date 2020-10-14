@@ -7,6 +7,13 @@ body {
   background: $gradient;
   font-size: $font-size;
   font-family: $font-family;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.4rem;
+  }
 }
 
 .faq-element {
@@ -129,7 +136,7 @@ body {
         content: url(../images/icon-arrow-down.svg);
         position: absolute;
         color: #696f7c;
-        right: -3%;
+        right: 0;
         top: 0;
       }
     }
