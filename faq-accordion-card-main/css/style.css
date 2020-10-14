@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9, #6565e7);
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.faq-element {
+  position: relative;
+  width: 80vw;
+  height: 75vh;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+
+.faq-element .image-container img {
+  position: absolute;
+}
+
+.faq-element .image-container img.woman-illustration {
+  width: 50%;
+  top: -13%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.faq-element .image-container img.box-illustration {
+  width: 20%;
+  top: -5%;
+  left: 35%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+@media (min-width: 425px) {
+  .faq-element .image-container img.woman-illustration {
+    top: -15%;
+  }
+  .faq-element .image-container img.box-illustration {
+    top: -5%;
+  }
+}
+
+@media (min-width: 500px) {
+  .faq-element .image-container img.woman-illustration {
+    top: -20%;
+  }
+  .faq-element .image-container img.box-illustration {
+    top: -10%;
+  }
+}
+
+@media (min-width: 700px) {
+  .faq-element .image-container img.woman-illustration {
+    width: 25%;
+    top: 50%;
+    left: -13%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .faq-element .image-container img.box-illustration {
+    width: 10%;
+    top: 50%;
+    left: -13%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-element .image-container img.woman-illustration {
+    width: 45%;
+    top: 50%;
+    left: -7%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .faq-element .image-container img.box-illustration {
+    width: 15%;
+    top: 50%;
+    left: -7%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.faq-element .accordion {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 80%;
+  width: 100%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.faq-element .accordion .accordion__title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #1d1e35;
+}
+
+@media (min-width: 700px) {
+  .faq-element .accordion .accordion__title {
+    text-align: left;
+  }
+}
+
+.faq-element .accordion .accordion__item {
+  position: relative;
+  color: #4a4b5e;
+  cursor: pointer;
+}
+
+.faq-element .accordion .accordion__item p {
+  margin-top: 10px;
+}
+
+.faq-element .accordion .accordion__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-element .accordion .accordion__item summary:after {
+  content: url(../images/icon-arrow-down.svg);
+  position: absolute;
+  color: #696f7c;
+  right: -3%;
+  top: 0;
+}
+
+.faq-element .accordion .accordion__item:hover {
+  color: #f47c57;
+}
+
+.faq-element .accordion .accordion__item[open] summary {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.faq-element .accordion .accordion__item[open] summary:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faq-element .accordion .accordion__item[open] p {
+  font-weight: 400;
+  color: #787887;
+}
+
+@media (min-width: 700px) {
+  .faq-element .accordion {
+    left: 15%;
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-element .accordion {
+    left: 40%;
+    width: 45%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
