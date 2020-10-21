@@ -77,6 +77,10 @@
 
   .article__info.active {
     background-color: $dark-blue;
+
+    @media (min-width: 1440px) {
+      background-color: $white;
+    }
   }
 
   .article__author {
@@ -135,22 +139,49 @@
     left: 0;
     padding: 10px 20px;
     background: $dark-blue;
+    font-size: 1.2rem;
     color: $white;
     width: 70%;
     height: 80px;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
     transform: translateY(100%);
+
+    @media (min-width: 1440px) {
+      position: fixed;
+      bottom: 38%;
+      left: 70%;
+      width: 220px;
+      height: 60px;
+      font-size: 0.9rem;
+      transform: translateY(0);
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      border-radius: 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        border-top: 15px solid $dark-blue;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+    }
   }
 
   .article__share-tooltip.active {
     display: flex;
     pointer-events: all;
     transform: translateY(0);
+
+    @media (min-width: 1440px) {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .article__share-tooltip.active span {
-    font-size: 1.2rem;
     font-weight: 500;
   }
 
@@ -172,5 +203,9 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  .icon {
+    cursor: pointer;
   }
 }
