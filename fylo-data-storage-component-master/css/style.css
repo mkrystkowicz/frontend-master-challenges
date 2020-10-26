@@ -31,6 +31,26 @@ body {
           justify-content: space-evenly;
 }
 
+@media (min-width: 1440px) {
+  .storage {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+}
+
 .storage .storage__header {
   background-color: #1d2c67;
   width: 90%;
@@ -39,8 +59,24 @@ body {
   border-radius: 15px 90px 15px 15px;
 }
 
+@media (min-width: 1440px) {
+  .storage .storage__header {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    height: 50%;
+    margin-bottom: 5%;
+    padding: 70px;
+  }
+}
+
 .storage .storage__header .logo-container {
   width: 70%;
+}
+
+@media (min-width: 1440px) {
+  .storage .storage__header .logo-container {
+    width: 60%;
+  }
 }
 
 .storage .storage__header .logo-container img {
@@ -73,6 +109,13 @@ body {
   background-color: #848794;
 }
 
+@media (min-width: 1440px) {
+  .storage .storage__header .storage__options {
+    width: 60%;
+    margin-top: 40px;
+  }
+}
+
 .storage .storage__info {
   position: relative;
   background-color: #1d2c67;
@@ -82,6 +125,14 @@ body {
   padding: 30px;
 }
 
+@media (min-width: 1440px) {
+  .storage .storage__info {
+    height: 40%;
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
+}
+
 .storage .storage__info .message {
   width: 100%;
   text-align: center;
@@ -89,6 +140,14 @@ body {
 
 .storage .storage__info .message span {
   font-weight: 800;
+}
+
+@media (min-width: 1440px) {
+  .storage .storage__info .message {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
 }
 
 .storage .storage__info form {
@@ -126,6 +185,13 @@ body {
   border-radius: 50%;
 }
 
+@media (min-width: 1440px) {
+  .storage .storage__info form .range .slider {
+    left: 53%;
+    top: 53%;
+  }
+}
+
 .storage .storage-left-label {
   position: absolute;
   bottom: -12%;
@@ -150,5 +216,21 @@ body {
 .storage .storage-left-label .storage-left-amount {
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+@media (min-width: 1440px) {
+  .storage .storage-left-label {
+    left: 83%;
+    top: 5%;
+    width: 25%;
+  }
+  .storage .storage-left-label::after {
+    content: "";
+    display: block;
+    margin-left: 128px;
+    margin-top: 20px;
+    border-top: 50px solid white;
+    border-left: 50px solid transparent;
+  }
 }
 /*# sourceMappingURL=style.css.map */
