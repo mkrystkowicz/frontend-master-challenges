@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  --top-bg-color: hsl(232, 19%, 15%);
+  --main-bg-color: hsl(230, 17%, 14%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --card-top-border: hsl(232, 19%, 15%);
+  --info-text-color: hsl(228, 34%, 66%);
+  --info-number-color: hsl(0, 0%, 100%);
+}
+
+main {
+  padding: 5%;
+  background: linear-gradient(
+    90deg,
+    var(--top-bg-color) 20%,
+    var(--main-bg-color) 100%
+  );
+  color: var(--info-text-color);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--info-number-color);
+}
+
+.description {
+  font-weight: 700;
+  padding-bottom: 5%;
+  border-bottom: 1px solid gray;
+}
+
+.mode-switch {
+  display: flex;
+  font-weight: 700;
+  padding-top: 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mode-switch label.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.mode-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mode-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border-radius: 34px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mode-switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mode-switch input:checked {
+  background: hsl(230, 22%, 74%);
+}
+
+.mode-switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.main-dashboard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-dashboard .media-dash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--card-bg-color);
+  font-weight: 700;
+  margin-bottom: 5%;
+  padding: 8%;
+  border-top: 5px solid;
+  border-radius: 3px;
+}
+
+.main-dashboard .media-dash,
+.daily-overview .daily-stat {
+  transition: all 0.3s ease-in-out;
+}
+
+.main-dashboard .media-dash.facebook {
+  border-top-color: hsl(195, 100%, 50%);
+}
+
+.main-dashboard .media-dash.twitter {
+  border-top-color: hsl(203, 89%, 53%);
+}
+
+.main-dashboard .media-dash.instagram {
+  position: relative;
+  border: 4px solid transparent;
+  border-radius: 3px;
+  background: var(--card-bg-color);
+}
+
+.main-dashboard .media-dash.instagram::after {
+  position: absolute;
+  top: -1%;
+  bottom: 98%;
+  left: -1%;
+  right: -1%;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  content: "";
+  z-index: 1;
+  border-radius: 3px 3px 0 0;
+}
+
+.main-dashboard .media-dash.youtube {
+  border-top-color: hsl(348, 97%, 39%);
+}
+
+.main-dashboard .media-dash .account-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+.main-dashboard .media-dash .account-name img {
+  margin-right: 5%;
+}
+
+.main-dashboard .media-dash .account-name .social-name {
+  margin-left: 5%;
+}
+
+.main-dashboard .media-dash .account-stats {
+  text-align: center;
+}
+
+.main-dashboard .media-dash .account-stats .followers-nr {
+  font-size: 3.5rem;
+  color: var(--info-number-color);
+}
+
+.main-dashboard .media-dash .account-stats .followers-tag {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 15%;
+}
+
+.main-dashboard .media-dash .current-day-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.main-dashboard .media-dash .current-day-stats img {
+  width: max-content;
+  height: max-content;
+  margin-right: 5%;
+}
+
+.main-dashboard .media-dash .current-day-stats .total-subs-today.huge-increase {
+  color: hsl(163, 72%, 41%);
+}
+
+.main-dashboard .media-dash .current-day-stats .total-subs-today.huge-decrease {
+  color: hsl(356, 69%, 56%);
+}
+
+.daily-overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-overview h2 {
+  color: var(--info-number-color);
+  margin: 10% 0;
+}
+
+.daily-overview .daily-stat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg-color);
+  margin-bottom: 8%;
+  padding: 8%;
+  border-radius: 3px;
+}
+
+.daily-overview .daily-stat .overview-title {
+  flex-basis: 50%;
+  font-weight: 700;
+}
+
+.daily-overview .daily-stat .image-container {
+  text-align: right;
+  flex-basis: 50%;
+}
+
+.daily-overview .daily-stat .stat-nr {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--info-number-color);
+  margin-top: 10%;
+}
+
+.daily-overview .daily-stat .total-subs-today {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 10%;
+}
+
+.daily-overview .daily-stat .total-subs-today img {
+  width: max-content;
+  height: max-content;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+
+.daily-overview .daily-stat .total-subs-today.total-subs-today.huge-increase {
+  color: hsl(163, 72%, 41%);
+}
+
+.daily-overview
+  .daily-stat
+  .total-subs-today.total-subs-today.total-subs-today.huge-decrease {
+  color: hsl(356, 69%, 56%);
+}
+
+.main-dashboard .media-dash:hover,
+.daily-overview .daily-stat:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1399px) {
+  :root {
+    font-size: 18px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1%;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 2rem;
+    border-bottom: none;
+  }
+  .mode-switch {
+    display: flex;
+    padding: 0;
+  }
+  .mode-switch .mode-text {
+    padding-right: 15px;
+  }
+  .main-dashboard {
+    flex-direction: row;
+    margin-top: 5%;
+  }
+  .main-dashboard .media-dash {
+    margin: 1%;
+    padding: 3%;
+    border-radius: 10px;
+  }
+  .main-dashboard .media-dash .account-name {
+    justify-content: center;
+    width: 100%;
+  }
+  .main-dashboard .media-dash .current-day-stats {
+    width: 100%;
+  }
+  .main-dashboard .media-dash.instagram {
+    border-radius: 10px;
+  }
+  .main-dashboard .media-dash.instagram::after {
+    bottom: 99%;
+  }
+  .main-dashboard .media-dash .account-name img {
+    /* display: none; */
+    margin-right: 0;
+  }
+  .daily-overview {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .daily-overview h2 {
+    flex-basis: 100%;
+    margin: 5% 1%;
+  }
+  .daily-overview .daily-stat {
+    flex-basis: 23%;
+    padding: 3%;
+    margin: 1%;
+    border-radius: 10px;
+  }
+}
