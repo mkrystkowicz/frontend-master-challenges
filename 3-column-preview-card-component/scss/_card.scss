@@ -1,0 +1,50 @@
+@import './mixins';
+
+.cards-container {
+  font-size: 15px;
+  width: 90vw;
+  margin: 30px auto 30px;
+}
+
+.card {
+  @include card;
+
+  &-orange {
+    background-color: $bright-orange;
+
+    .card__button {
+      color: $bright-orange;
+
+      &:hover {
+        background-color: $bright-orange;
+        color: $very-light-gray;
+      }
+    }
+  }
+
+  &-blue {
+    background-color: $dark-cyan;
+
+    .card__button {
+      color: $dark-cyan;
+
+      &:hover {
+        background-color: $dark-cyan;
+        color: $very-light-gray;
+      }
+    }
+  }
+
+  &-green {
+    background-color: $very-dark-cyan;
+
+    .card__button {
+      color: $very-dark-cyan;
+
+      &:hover {
+        background-color: $very-dark-cyan;
+        color: $very-light-gray;
+      }
+    }
+  }
+}

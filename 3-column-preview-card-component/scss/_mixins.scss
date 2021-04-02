@@ -1,0 +1,33 @@
+@mixin card {
+  height: 25rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  .card__icon {
+    width: 4rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-family: 'Big Shoulders Display', cursive;
+    color: $very-light-gray;
+  }
+
+  .card__description {
+    font-family: 'Lexend Deca', sans-serif;
+    color: $transparent-white;
+  }
+
+  .card__button {
+    font-family: 'Lexend Deca', sans-serif;
+    width: 60%;
+    padding: 10px 15px;
+    margin: 2rem 0;
+    border-radius: 50rem;
+    border: 2px solid $very-light-gray;
+    outline: none;
+    transition: all 0.2s ease-out;
+  }
+}
