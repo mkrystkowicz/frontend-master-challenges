@@ -29,5 +29,9 @@
     border: 2px solid $very-light-gray;
     outline: none;
     transition: all 0.2s ease-out;
+
+    @media (min-width: 1200px) {
+      width: 50%;
+    }
   }
 }
