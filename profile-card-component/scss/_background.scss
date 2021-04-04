@@ -1,0 +1,10 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-cyan;
+  background-image: url('../images/bg-pattern-top.svg'),
+    url('../images/bg-pattern-bottom.svg');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: 300% -60%, -150% 150%;
+}
