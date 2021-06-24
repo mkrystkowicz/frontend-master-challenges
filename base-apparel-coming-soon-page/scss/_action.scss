@@ -18,7 +18,7 @@
     font-family: $base-font-family;
     font-weight: $font-light;
     color: $desaturated-red;
-    transition: all 0.3s ease-out;
+    transition: border-color 0.3s ease-out;
 
     @media (min-width: 1440px) {
       height: 3rem;
@@ -85,6 +85,10 @@
       color: $soft-red;
       top: 3rem;
       left: 1.2rem;
+
+      @media (min-width: 1440px) {
+        top: 4rem;
+      }
     }
   }
 }
