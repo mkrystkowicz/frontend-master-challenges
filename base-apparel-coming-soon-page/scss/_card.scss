@@ -5,16 +5,45 @@
     hsl(0, 100%, 98%)
   );
   height: 100vh;
+  overflow: hidden;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
+  }
 
   &__logo-container {
     margin: 25px 15px;
 
+    @media (min-width: 1440px) {
+      margin: 4rem 7rem;
+      grid-column: 1/4;
+      grid-row: 1/2;
+    }
+
     img {
       width: 35%;
+
+      @media (min-width: 1440px) {
+        width: 40%;
+      }
+    }
+  }
+
+  &__header-image-container {
+    @media (min-width: 1440px) {
+      width: 100%;
+      grid-column: 5/8;
+      grid-row: 1/4;
     }
   }
 
   &__header-image-container img {
+    grid-column: 4/6;
     width: 100%;
   }
 
@@ -28,9 +57,25 @@
     font-weight: $font-bold;
     letter-spacing: 0.6rem;
 
+    @media (min-width: 1440px) {
+      letter-spacing: 0.8rem;
+      line-height: 1.5;
+      grid-column: 1/4;
+      grid-row: 2/3;
+      text-align: left;
+      margin: 0 7rem;
+    }
+
     &--lighter {
       font-weight: $font-light;
       color: $desaturated-red;
+
+      @media (min-width: 1440px) {
+        display: inline;
+        text-align: left;
+        width: 100%;
+        margin-left: 0 !important;
+      }
     }
   }
 
@@ -40,10 +85,27 @@
     color: $desaturated-red;
     text-align: center;
     margin: 0 25px 10px;
+
+    @media (min-width: 1440px) {
+      grid-column: 1/4;
+      grid-row: 3/4;
+      text-align: left;
+      margin: 2rem 7rem 0;
+      font-family: $base-font-family;
+      font-weight: $font-light;
+      font-size: 1.2rem;
+      color: $desaturated-red;
+    }
   }
 
   &__action {
     display: block;
     margin: 25px auto;
+
+    @media (min-width: 1440px) {
+      grid-column: 1/4;
+      grid-row: 5/6;
+      margin: 0 7rem 10rem;
+    }
   }
 }

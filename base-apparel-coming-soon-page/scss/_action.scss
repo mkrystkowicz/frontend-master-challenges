@@ -20,6 +20,11 @@
     color: $desaturated-red;
     transition: all 0.3s ease-out;
 
+    @media (min-width: 1440px) {
+      height: 3rem;
+      width: 24rem;
+    }
+
     &::placeholder {
       color: $desaturated-red;
     }
@@ -49,6 +54,12 @@
     padding: 5px 25px;
     border-radius: 10rem;
     transition: 0.3s ease-out;
+
+    @media (min-width: 1440px) {
+      left: 24rem;
+      height: 3rem;
+      padding: 5px 35px;
+    }
 
     &:hover {
       transform: translateX(-50%) scale(1.2);
