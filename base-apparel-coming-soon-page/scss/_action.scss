@@ -18,6 +18,7 @@
     font-family: $base-font-family;
     font-weight: $font-light;
     color: $desaturated-red;
+    transition: all 0.3s ease-out;
 
     &::placeholder {
       color: $desaturated-red;
@@ -25,6 +26,14 @@
 
     &:focus {
       outline: none;
+    }
+
+    &--failed {
+      background-image: url(../images/icon-error.svg);
+      background-size: 1.2rem;
+      background-repeat: no-repeat;
+      background-position: 80% center;
+      border-color: $soft-red;
     }
   }
 
@@ -51,6 +60,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+
+  &__info {
+    display: none;
+
+    &--failed {
+      display: block;
+      position: absolute;
+      font-size: 0.6rem;
+      font-family: $base-font-family;
+      color: $soft-red;
+      top: 3rem;
+      left: 1.2rem;
     }
   }
 }
