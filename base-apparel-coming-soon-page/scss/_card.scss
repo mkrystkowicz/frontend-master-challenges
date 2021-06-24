@@ -1,0 +1,49 @@
+.card {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  height: 100vh;
+
+  &__logo-container {
+    margin: 25px 15px;
+
+    img {
+      width: 35%;
+    }
+  }
+
+  &__header-image-container img {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 25px 10px;
+    font-size: 3rem;
+    text-align: center;
+    color: $dark-grayish-red;
+    font-family: $base-font-family;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    letter-spacing: 0.6rem;
+
+    &--lighter {
+      font-weight: $font-light;
+      color: $desaturated-red;
+    }
+  }
+
+  &__description {
+    font-family: $base-font-family;
+    font-weight: $font-light;
+    color: $desaturated-red;
+    text-align: center;
+    margin: 0 25px 10px;
+  }
+
+  &__action {
+    display: block;
+    margin: 25px auto;
+  }
+}

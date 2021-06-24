@@ -1,0 +1,56 @@
+.action {
+  position: relative;
+  width: 16rem;
+  height: 2.5rem;
+
+  &__input {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: transparent;
+    border: 1px solid $dark-grayish-red;
+    border-right: none;
+    height: 2.5rem;
+    width: 14rem;
+    padding: 10px 20px;
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    font-family: $base-font-family;
+    font-weight: $font-light;
+    color: $desaturated-red;
+
+    &::placeholder {
+      color: $desaturated-red;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 14rem;
+    transform: translateX(-50%);
+    background: $soft-red;
+    border: 1px solid $soft-red;
+    height: 2.5rem;
+    text-align: center;
+    padding: 5px 25px;
+    border-radius: 10rem;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      transform: translateX(-50%) scale(1.2);
+      background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      border-color: transparent;
+    }
+
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
